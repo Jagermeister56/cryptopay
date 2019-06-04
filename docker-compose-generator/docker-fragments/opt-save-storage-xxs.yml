@@ -6,7 +6,6 @@ services:
   bitcoind:
     environment:
       BITCOIN_EXTRA_ARGS: prune=5000
-services:
   bitcoinzd:
     environment:
       BITCOIN_EXTRA_ARGS: prune=5000

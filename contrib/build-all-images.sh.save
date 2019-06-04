@@ -547,10 +547,10 @@ cd - && cd ..
 
 
 # Build docker-bitcoinz
-# https://github.com/Jagermeister56/bitcoinz-docker/blob/master/bitcoinz/1.0/bitcoinz-docker
-DOCKERFILE="bitcoinz/1.0/bitcoinz-docker"
-echo "Building bitcoinz/1.0/bitcoinz-docker:latest"
-git clone bitcoinz/1.0/bitcoinz-docker bitcoinz-docker
+# https://raw.githubusercontent.com/Jagermeister56/bitcoinz-docker/master/bitcoinz/1.0/DockerFile
+DOCKERFILE="jagermeister/bitcoinz-docker"
+echo "Building jagermeister/bitcoinz-docker:latest"
+git clone https://github.com/Jagermeister56/bitcoinz-docker/blob/master/DockerFile bitcoinz-docker
 cd bitcoinz-docker
 git checkout master
 cd "$(dirname $DOCKERFILE)"

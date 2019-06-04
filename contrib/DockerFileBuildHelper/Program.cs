@@ -445,6 +445,11 @@ namespace DockerFileBuildHelper
                     dockerInfo.GitLink = "https://github.com/shesek/spark-wallet";
                     dockerInfo.GitRef = $"v{image.Tag.Split('-')[0]}";
                     break;
+                case "bitcoinz-docker":
+                    dockerInfo.DockerFilePath = $"bitcoinz-docker";
+                    dockerInfo.GitLink = "bitcoinz/1.0/bitcoinz-docker";
+                    dockerInfo.GitRef = "master";
+                    break;
                 default:
                     if (firstTry)
                     {

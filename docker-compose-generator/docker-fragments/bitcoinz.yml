@@ -1,10 +1,10 @@
 version: "3"
 
 services:
-  viacoind:
+  bitcoinzd:
       restart: unless-stopped
       container_name: btcpayserver_bitcoinzd
-      image: jagermeister/bitcoinz-docker:latest
+      image: jagermeister/bitcoinz:latest
       environment:
         BITCOIN_EXTRA_ARGS: |
           rpcport=43782
@@ -19,13 +19,13 @@ services:
   nbxplorer:
       environment:
         NBXPLORER_CHAINS: "btcz"
-        NBXPLORER_VIARPCURL: http://bitcoinzd:43782/
-        NBXPLORER_VIANODEENDPOINT: bitcoinzd:39388
+        NBXPLORER_BTCZRPCURL: http://bitcoinzd:43782/
+        NBXPLORER_BTCZNODEENDPOINT: bitcoinzd:39388
       volumes:
-        - "viacoin_datadir:/root/.bitcoinz"
+        - "bitcoinz_datadir:/root/.bitcoinz"
   btcpayserver:
       environment:
         BTCPAY_CHAINS: "btcz"
-        BTCPAY_VIAEXPLORERURL: http://nbxplorer:32838/
+        BTCPAY_BTCZEXPLORERURL: http://nbxplorer:32838/
 volumes:
   bitcoinz_datadir:

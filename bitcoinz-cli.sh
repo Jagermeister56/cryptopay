@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec -ti btcpayserver_bitcoinz bitcoinz-cli -datadir="/data" "$@"
+docker exec -ti btcpayserver_bitcoinzd bitcoinz-cli -datadir="/data" "$@"

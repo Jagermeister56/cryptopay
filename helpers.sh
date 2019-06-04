@@ -1,6 +1,7 @@
 install_tooling() {
     scripts=( \
                 "btcpayserver_bitcoind" "bitcoin-cli.sh" "Command line for your Bitcoin instance" \
+                "btcpayserver_bitcoinzd" "bitcoinz-cli.sh" "Command line for your Bitcoinz instance" \
                 "btcpayserver_clightning_bitcoin" "bitcoin-lightning-cli.sh" "Command line for your Bitcoin C-Lightning instance" \
                 "btcpayserver_lnd_bitcoin" "bitcoin-lncli.sh" "Command line for your Bitcoin LND instance" \
                 "btcpayserver_bgoldd" "bgold-cli.sh" "Command line for your BGold instance" \

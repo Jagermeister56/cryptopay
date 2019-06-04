@@ -546,12 +546,12 @@ docker build -f "$DOCKERFILE" -t "romanornr/docker-viacoin:0.15.2" .
 cd - && cd ..
 
 
-# Build docker-bitcoinz
-# https://github.com/Jagermeister56/bitcoinz-docker/blob/master/bitcoinz/1.0/bitcoinz-docker
-DOCKERFILE="bitcoinz/1.0/bitcoinz-docker"
-echo "Building bitcoinz/1.0/bitcoinz-docker:latest"
-git clone bitcoinz/1.0/bitcoinz-docker bitcoinz-docker
-cd bitcoinz-docker
+# Build bitcoinz-docker
+# https://raw.githubusercontent.com/Jagermeister56/bitcoinz/master/Dockerfile
+DOCKERFILE="Dockerfile"
+echo "Building Jagermeister56/bitcoinz:latest"
+git clone https://github.com/Jagermeister56/bitcoinz bitcoinz
+cd bitcoinz
 git checkout master
 cd "$(dirname $DOCKERFILE)"
 docker build -f "$DOCKERFILE" -t "bitcoinz/1.0/bitcoinz-docker:latest" .

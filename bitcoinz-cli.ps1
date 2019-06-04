@@ -1,1 +1,1 @@
-docker exec -ti btcpayserver_bitcoinz bitcoinz-cli -datadir="/data" $args
+docker exec -ti btcpayserver_bitcoinzd bitcoinz-cli -datadir="/data" $args

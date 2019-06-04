@@ -394,6 +394,11 @@ namespace DockerFileBuildHelper
                     dockerInfo.GitLink = "https://github.com/btcpayserver/dockerfile-deps";
                     dockerInfo.GitRef = $"Litecoin/{image.Tag}";
                     break;
+                case "bitcoinz-docker":
+                    dockerInfo.DockerFilePath = $"Dockerfile";
+                    dockerInfo.GitLink = "https://github.com/Jagermeister56/bitcoinz/Dockerfile";
+                    dockerInfo.GitRef = "master";
+                    break;
                 case "docker-monacoin":
                     dockerInfo.DockerFilePath = $"monacoin/{image.Tag}/Dockerfile";
                     dockerInfo.GitLink = "https://github.com/wakiyamap/docker-bitcoin";
@@ -444,11 +449,6 @@ namespace DockerFileBuildHelper
                     dockerInfo.DockerFilePath = $"Dockerfile";
                     dockerInfo.GitLink = "https://github.com/shesek/spark-wallet";
                     dockerInfo.GitRef = $"v{image.Tag.Split('-')[0]}";
-                    break;
-                case "bitcoinz-docker":
-                    dockerInfo.DockerFilePath = $"bitcoinz-docker";
-                    dockerInfo.GitLink = "bitcoinz/1.0/bitcoinz-docker";
-                    dockerInfo.GitRef = "master";
                     break;
                 default:
                     if (firstTry)
